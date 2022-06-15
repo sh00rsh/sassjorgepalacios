@@ -9,8 +9,10 @@ $font1: 'Cookie', cursive;
 $font2: 'Fredoka One', cursive;
 $font3: 'Righteous', cursive;
 
-
-
+@mixin sizes ($height, $width) {
+    height: $height;
+    width: $width;    
+}
 
 header{
     height: 70px;
@@ -23,11 +25,29 @@ header{
     }
 }
 .main1{
-    height: 700px;
-    width: 100%;
+    @include sizes(700px, 100%);
     background-image: url(/img/background1.jpg);
     background-position: center;
     background-size: cover;
+}
+.nav1{
+    padding-top: 100px;
+    margin-left: 100px;
+    font-size: 30px;
+    
+    
+}
+.nav1 ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+.nav1 a{
+    text-decoration: none;
+    color: black;
+}
+.nav1 a:hover{
+    color: white
 }
 .main2{
     height: 70px;
